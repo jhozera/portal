@@ -1,0 +1,361 @@
+@keyframes animacao {
+    0% {
+        transform: translateX(-15px);
+    } 50% {
+        transform: translateX(15px);
+    } 100% {
+        transform: translateX(-15px);
+    }
+}
+
+.N:hover, .B:hover, .C:hover, .D:hover {
+    animation: animacao 10s infinite;
+}
+
+
+h1, h2, h3 {
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 200px;
+    margin-left: 200px;
+
+}
+
+h1 {
+    margin-top: 200px;
+    margin-left: 200px;
+
+}
+
+
+
+h2 {
+    background: linear-gradient(to right, red, rgb(202, 5, 5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 800px;
+    margin-left: 275px;
+}
+
+body {
+    background: linear-gradient(to bottom, rgb(173, 4, 4), #b90303cc);
+    height: 450vh; /* Para permitir rolagem */
+    width: 90%;
+    margin: 0;
+    
+}
+
+#barra {
+    position: fixed;
+    background: linear-gradient(to left, rgb(248, 248, 248), #ffffff);
+    border-radius: 5px;
+    top: 0;
+    padding: 10px;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+}
+
+#button {
+    display: flex;    
+    border: none;  
+    margin-top: 200px;
+    margin-left:200px;
+    flex-wrap: wrap;
+    gap: 100px;
+    align-items: center;
+
+}
+
+.N, .B, .C, .D {
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    font-size: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-family: Arial, Helvetica, sans-serif;
+    width: 40%;
+    height: 200px;
+    overflow: hidden;
+    padding: 0;
+    box-shadow: 5px 5px 10px  #00000010, -5px -5px 10px #00000010;
+
+}
+
+.N img, .B img, .C img, .D img {
+    /* opacity: 0.5; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+
+#container {
+    background-color: #ffffff; /* Fundo branco */
+    padding: 60px;
+    border-radius: 10px;
+    margin-top: 300px; /* Ajuste o espaçamento superior para não sobrepor */
+    color: #333; /* Cor do texto */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 85%; /* Ajuste da largura para não distorcer */
+    height: 350px;
+    top: 20px;
+    margin-left: 110px;
+    margin-right: auto; /* Centralizar o container */
+    gap: 10px;
+}
+
+#bloco1, #bloco2, #bloco3 {
+    background: #f0f0f0; /* Blocos com leve tom cinza para destaque */
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left: auto;
+    width: 25%; /* Garantir que os blocos fiquem alinhados corretamente */
+    padding: 20px; /* Espaçamento interno */
+
+}
+
+
+#caixas {
+    display: flex;
+    position: absolute;
+    background: #f0f0f0;
+    width: 80%;
+    height: 170vh;
+    border:  none;
+    border-radius: 50px;
+    top: 1700px;
+    padding: auto;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-items: auto;
+    flex-direction: column;
+}
+
+.caixa1, .caixa2, .caixa3, .caixa4 {
+    background: #f0f0f0;
+    border: none;
+    border-radius: 30px;
+    width: 400px;
+    height: 300px;    
+    margin-left: 100px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+
+
+.caixa1 img, .caixa2 img, .caixa3 img, .caixa4 img {
+    /* opacity: 0.5; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+
+.cx1 {
+    position: absolute;
+    background: rgb(202, 5, 5);
+    color: white;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 20px;
+    width: 20%;
+    height: 50px;
+    text-decoration: none;
+    
+}
+
+
+
+.cx1 {
+    margin-top: 225px;
+    margin-left:100px;
+}
+
+
+
+/* Mobile (max-width: 600px) */
+@media only screen and (max-width: 600px) {
+    body {
+      height: 100vh; /* Adjust body height for mobile */
+    }
+    
+    #barra {
+      padding: 5px; /* Reduce padding for mobile */
+    }
+    
+    h1, h2, h3 {
+      font-size: 18px;
+      margin-top: 20px;
+      margin-left: 10px;
+    }
+    
+    #button {
+      margin-left: 0;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    .N, .B, .C, .D {
+      font-size: 16px;
+      width: 100%;
+      height: 120px;
+      margin-top: 20px;
+    }
+    
+    #container {
+      flex-direction: column;
+      width: 100%;
+      padding: 20px;
+    }
+    
+    #bloco1, #bloco2, #bloco3 {
+      width: 100%;
+      margin-top: 20px;
+    }
+    
+    #caixas {
+      width: 100%;
+      height: auto;
+      margin-left: 0;
+    }
+    
+    .caixa1, .caixa2, .caixa3, .caixa4 {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .cx1 {
+      margin-top: 150px;
+      margin-left: 10px;
+    }
+  }
+  
+  /* Tablet (max-width: 900px) */
+  @media only screen and (max-width: 900px) {
+    body {
+      height: 100vh; /* Adjust body height for tablet */
+    }
+    
+    #barra {
+      padding: 10px; /* Reduce padding for tablet */
+    }
+    
+    h1, h2, h3 {
+      font-size: 22px;
+      margin-top: 30px;
+      margin-left: 20px;
+    }
+    
+    #button {
+      margin-left: 20px;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    
+    .N, .B, .C, .D {
+      font-size: 18px;
+      width: 80%;
+      height: 150px;
+      margin-top: 30px;
+    }
+    
+    #container {
+      flex-direction: column;
+      width: 90%;
+      padding: 30px;
+    }
+    
+    #bloco1, #bloco2, #bloco3 {
+      width: 80%;
+      margin-top: 30px;
+    }
+    
+    #caixas {
+      width: 90%;
+      height: auto;
+      margin-left: 20px;
+    }
+    
+    .caixa1, .caixa2, .caixa3, .caixa4 {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .cx1 {
+      margin-top: 180px;
+      margin-left: 20px;
+    }
+  }
+  
+  /* Notebook (max-width: 1200px) */
+  @media only screen and (max-width: 1200px) {
+    body {
+      height: 100vh; /* Adjust body height for notebook */
+    }
+    
+    #barra {
+      padding: 15px; /* Reduce padding for notebook */
+    }
+    
+    h1, h2, h3 {
+      font-size: 25px;
+      margin-top: 40px;
+      margin-left: 30px;
+    }
+    
+    #button {
+      margin-left: 30px;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    
+    .N, .B, .C, .D {
+      font-size: 20px;
+      width: 70%;
+      height: 180px;
+      margin-top: 40px;
+    }
+    
+    #container {
+      flex-direction: column;
+      width: 80%;
+      padding: 40px;
+    }
+    
+    #bloco1, #bloco2, #bloco3 {
+      width: 70%;
+      margin-top: 40px;
+    }
+    
+    #caixas {
+      width: 80%;
+      height: auto;
+      margin-left: 30px;
+    }
+    
+    .caixa1, .caixa2, .caixa3, .caixa4 {
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+ }
