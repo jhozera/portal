@@ -193,3 +193,54 @@ footer p {
     }
     
 }
+
+@media  (min-width: 800px) and (max-width: 1550px) {
+
+    body {
+     width: 90%;
+     height: 300vh;
+    }
+ 
+ 
+     #button {
+         flex-direction: column;
+         align-items: center;
+         translate: 25px;
+     }
+ 
+     .N, .B, .C, .D {
+         width: 80%;
+     }
+ 
+     #container, #caixas {
+         flex-direction: column;
+         align-items: center;
+         /* translate: 10px; */
+     }
+ 
+     #container {
+         translate: 10px;
+     }
+ 
+     #bloco1, #bloco2, #bloco3, .caixa {
+         width: 90%;
+     }
+ 
+     /* .logo{
+         position: relative;
+         width: 18%;
+     } */
+ 
+     .N h1, .B h1, .C h1, .D h1 {
+     position: absolute;
+     margin-top: 50px;
+     margin-left: 175px;
+     
+ 
+     }
+    
+     footer p {
+         translate: 25px;
+     }
+     
+ }
