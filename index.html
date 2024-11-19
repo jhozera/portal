@@ -1,94 +1,227 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRC NEGOCIE</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleace.css">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <title>Return</title>
+    <script src="./interface.js" defer></script>
 </head>
-<body>
-    <!-- <h2>Vantagens de negociar sua dívida online</h2> -->
-    <nav id="barra" class="animate__animated animate__bounceInLeft">
-        <img src="./imagens/return.png" alt="Return" class="logo">
-    </nav>
-    <div id="button" class="animate__animated animate__bounceInLeft">
-        <a class="N" href="https://api.whatsapp.com/send?phone=554130220414">
-            <h1>Negociação</h1>
-            <img src="./imagens/negocição.png" alt="negociação">
+<body class="animate__animated animate__bounceInLeft">
+    <div class="banner">
+        <div class="banner-content">
+            <div class="logo1">TRC <span style="color: red;">TABORDA</span></div>
+            <nav id="barra" class="menu-toggle">
+                <div id="menu-toggle">☰</div>
+                <a class="bt1" href="#trc"><strong> TRC</strong></a>
+                <a class="bt2" onclick="scrollToSection('par-btn')" href="#parceiros" ><strong>Parceiros</strong></a>
+                <a class="bt3" onclick="scrollToSection('contato-btn')"href="#contato"><strong>Contato</strong></a>
+                <a class="bt3" onclick="scrollToSection('contato-btn')" href="#boleto"><strong>Boleto</strong></a>
+                <a class="bt3" href="#atualizacao" onclick="openModal()"><strong>Atualização</strong></a>
+                <a id="aceconsta" class="bt3"><strong>Acessibilidade</strong></a>
+            </nav>            
+            <nav id="desktop" class="desktop-nav">
+                <div class="logo">TRC <span style="color: red;">TABORDA</span></div>
+                <ul class="dek">
+                    <li><a href="#trc" style="font-size: 20px;">TRC</a></li>
+                    <li><a href="#parceiros"  onclick="scrollToSection('par-btn')" style="font-size: 20px;">Parceiros</a></li>
+                    <li><a href="#contato" onclick="scrollToSection('contato-btn')"style="font-size: 20px;">Contato</a></li>
+                    <li><a href="#atualizacao" onclick="showContent('atua')"onclick="openModal()">Atualização</a></li>
+                    <button id="aceconst" class="acessibilidade"><img src="/imagem/Acessibilidade-gRANDE-300x300.png" style="width: 50%;"></button>
+                </ul>
+            </nav>
+            <div class="titulo">
+                <h1 class="ti">
+                    <span> TRC Taborda</span><br>
+                    tem as melhores<br>
+                    condições para você
+                </h1>
+            </div>
+        </div>
+    </div>   
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#e43003" fill-opacity="1" d="M0,192L48,170.7C96,149,192,107,288,112C384,117,480,171,576,202.7C672,235,768,245,864,224C960,203,1056,149,1152,128C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#e43003" fill-opacity="1" d="M0,192L48,170.7C96,149,192,107,288,112C384,117,480,171,576,202.7C672,235,768,245,864,224C960,203,1056,149,1152,128C1248,107,1344,117,1392,122.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>    
+    <div id="caixa">
+    <form id="cx">
+        <h1 style="font-size: 22px; font-family: Arial, Helvetica, sans-serif;">Consulte suas dívidas de forma gratuita e negocie as melhores condições para você.</h1>
+        <input class="campo1" type="number" name="cpf" placeholder="Digite seu documento (CPF/CNPJ)"><br>
+        <input class="campo2" type="text" placeholder="Digite seu Nome Completo"><br>
+        <br><input class="consultar" type="submit" value="Consultar">
+    </form>
+</div>
+    <div id="button">
+        <h5>Nossas soluções para você</h5>
+        <a class="B" id="contato-btn" href="https://api.whatsapp.com/send?phone=554130220414">
+            <svg class="sty" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff5500" fill-opacity="1" d="M0,192L17.1,197.3C34.3,203,69,213,103,224C137.1,235,171,245,206,250.7C240,256,274,256,309,234.7C342.9,213,377,171,411,165.3C445.7,160,480,192,514,186.7C548.6,181,583,139,617,138.7C651.4,139,686,181,720,202.7C754.3,224,789,224,823,218.7C857.1,213,891,203,926,181.3C960,160,994,128,1029,138.7C1062.9,149,1097,203,1131,234.7C1165.7,267,1200,277,1234,256C1268.6,235,1303,181,1337,138.7C1371.4,96,1406,64,1423,48L1440,32L1440,0L1422.9,0C1405.7,0,1371,0,1337,0C1302.9,0,1269,0,1234,0C1200,0,1166,0,1131,0C1097.1,0,1063,0,1029,0C994.3,0,960,0,926,0C891.4,0,857,0,823,0C788.6,0,754,0,720,0C685.7,0,651,0,617,0C582.9,0,549,0,514,0C480,0,446,0,411,0C377.1,0,343,0,309,0C274.3,0,240,0,206,0C171.4,0,137,0,103,0C68.6,0,34,0,17,0L0,0Z"></path></svg>
+            <p><strong>2ª Via de Boleto</strong></p>
+            <img src="./imagem/lift_to_talk.webp" alt="primeiro"  style="width: 15%; margin-left: 20px; margin-top: 20px;">
         </a>
-
-        <a class="B" href="https://api.whatsapp.com/send?phone=554130220414">
-            <h1>2ª Via de Boleto</h1>
-            <img src="./imagens/negociacao-licoes.jpg" alt="negociação">
+        <a class="C" id="contato-btn" href="https://api.whatsapp.com/send?phone=554130220414">
+            <svg class="sty"   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff5500" fill-opacity="1" d="M0,192L17.1,197.3C34.3,203,69,213,103,224C137.1,235,171,245,206,250.7C240,256,274,256,309,234.7C342.9,213,377,171,411,165.3C445.7,160,480,192,514,186.7C548.6,181,583,139,617,138.7C651.4,139,686,181,720,202.7C754.3,224,789,224,823,218.7C857.1,213,891,203,926,181.3C960,160,994,128,1029,138.7C1062.9,149,1097,203,1131,234.7C1165.7,267,1200,277,1234,256C1268.6,235,1303,181,1337,138.7C1371.4,96,1406,64,1423,48L1440,32L1440,0L1422.9,0C1405.7,0,1371,0,1337,0C1302.9,0,1269,0,1234,0C1200,0,1166,0,1131,0C1097.1,0,1063,0,1029,0C994.3,0,960,0,926,0C891.4,0,857,0,823,0C788.6,0,754,0,720,0C685.7,0,651,0,617,0C582.9,0,549,0,514,0C480,0,446,0,411,0C377.1,0,343,0,309,0C274.3,0,240,0,206,0C171.4,0,137,0,103,0C68.6,0,34,0,17,0L0,0Z"></path></svg>
+            <p><strong>Falar com nossos especialistas</strong></p>
+            <img src="./imagem/headset_mic.webp" alt="primeiro"  style="width: 15%; margin-left: 20px; margin-top: 20px;">
         </a>
-
-        <a class="C" href="https://api.whatsapp.com/send?phone=554130220414">
-            <h1>Falar com nossos especialistas</h1>
-            <img src="./imagens/RECEPCIONISTA-20180226151222_400.jpg" alt="negociação">
+        <a class="D" id="contato-btn" href="https://api.whatsapp.com/send?phone=554130220414">
+            <svg class="sty"   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff5500" fill-opacity="1" d="M0,192L17.1,197.3C34.3,203,69,213,103,224C137.1,235,171,245,206,250.7C240,256,274,256,309,234.7C342.9,213,377,171,411,165.3C445.7,160,480,192,514,186.7C548.6,181,583,139,617,138.7C651.4,139,686,181,720,202.7C754.3,224,789,224,823,218.7C857.1,213,891,203,926,181.3C960,160,994,128,1029,138.7C1062.9,149,1097,203,1131,234.7C1165.7,267,1200,277,1234,256C1268.6,235,1303,181,1337,138.7C1371.4,96,1406,64,1423,48L1440,32L1440,0L1422.9,0C1405.7,0,1371,0,1337,0C1302.9,0,1269,0,1234,0C1200,0,1166,0,1131,0C1097.1,0,1063,0,1029,0C994.3,0,960,0,926,0C891.4,0,857,0,823,0C788.6,0,754,0,720,0C685.7,0,651,0,617,0C582.9,0,549,0,514,0C480,0,446,0,411,0C377.1,0,343,0,309,0C274.3,0,240,0,206,0C171.4,0,137,0,103,0C68.6,0,34,0,17,0L0,0Z"></path></svg>
+            <p><strong>Antecipação</strong></p>
+            <img src="./imagem/barcode.webp" alt="segunda" style="width: 15%; margin-left: 20px; margin-top: 20px;">
         </a>
-
-        <a class="D" href="https://api.whatsapp.com/send?phone=554130220414">
-            <h1>Antecipação</h1>
-            <img src="./imagens/antecipacao-de-pagamento.jpg" alt="negociação">
+        <a class="D" id="contato-btn" href="https://api.whatsapp.com/send?phone=554130220414">
+            <svg class="sty"   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff5500" fill-opacity="1" d="M0,192L17.1,197.3C34.3,203,69,213,103,224C137.1,235,171,245,206,250.7C240,256,274,256,309,234.7C342.9,213,377,171,411,165.3C445.7,160,480,192,514,186.7C548.6,181,583,139,617,138.7C651.4,139,686,181,720,202.7C754.3,224,789,224,823,218.7C857.1,213,891,203,926,181.3C960,160,994,128,1029,138.7C1062.9,149,1097,203,1131,234.7C1165.7,267,1200,277,1234,256C1268.6,235,1303,181,1337,138.7C1371.4,96,1406,64,1423,48L1440,32L1440,0L1422.9,0C1405.7,0,1371,0,1337,0C1302.9,0,1269,0,1234,0C1200,0,1166,0,1131,0C1097.1,0,1063,0,1029,0C994.3,0,960,0,926,0C891.4,0,857,0,823,0C788.6,0,754,0,720,0C685.7,0,651,0,617,0C582.9,0,549,0,514,0C480,0,446,0,411,0C377.1,0,343,0,309,0C274.3,0,240,0,206,0C171.4,0,137,0,103,0C68.6,0,34,0,17,0L0,0Z"></path></svg>
+            <p><strong>Quitação</strong></p>
+            <img src="./imagem/barcode.webp" alt="segunda" style="width: 15%; margin-left: 20px; margin-top: 20px;">
         </a>
     </div>
-    <div id="container" class="animate__animated animate__bounceInLeft">
+<div id="caixa-pr">
+    <img class="img1" src="./imagem/mulher-adquirindo-certificado.png">
+    <span class="ca-ti"><strong>As melhores condições</strong><br>
+    <br>
+     Venha regularizar seus débitos<br>
+     em aberto com TRC Taborda, 
+     <br>entre em contato com nossos especialistas.
+   </span>
+<a class="button-caixa" href="https://api.whatsapp.com/send?phone=554130220414">Falar com nossos especialistas</a>
+</div>
+    <div id="pt2">
+        <h6><strong>Vantagens online</strong></h6>
         <div id="bloco1">
             <p>Melhora seu score<br>
-                <img src="./imagens/D.png" alt="Melhora seu score">
+                <img src="./imagem/D.png" alt="Melhora seu score">
                 <br>Negociando online, você ganha tempo e limpa seu nome.
             </p>
         </div>
         <div id="bloco2">
             <p>Mais rápido e sem filas<br>
-                <img src="./imagens/bbb.png" alt="Mais rápido e sem filas">
+                <img src="./imagem/bbb.png" alt="Mais rápido e sem filas">
                 <br>Negocie sua dívida de onde estiver, sem burocracia e em poucos minutos.
             </p>
         </div>
         <div id="bloco3">
             <p>Segurança e tranquilidade<br>
-                <img src="./imagens/ccc.png" alt="Segurança e tranquilidade">
+                <img src="./imagem/ccc.png" alt="Segurança e tranquilidade">
                 <br>Sua negociação ocorre em ambiente seguro e com proteção de dados.
             </p>
         </div>
     </div>
-    <div id="caixas">
-        <div class="caixa">
-            <h2><strong>Nosso Compromisso</strong></h2>
-            <p>São 20 anos de experiência em Atendimento ao Cliente</p>
-            <img src="./imagens/predio.jpg" alt="Nosso Compromisso">
-            <a class="cx1" href="https://trctaborda.com.br/quem-somos">Saiba Mais</a>
-        </div>
-        <div class="caixa">
-            <h2><strong>Sua e Nossa Segurança</strong></h2>
-            <p>Atendemos com responsabilidade, garantindo proteção em cada contato.</p>
-            <img src="./imagens/seguranca.jpg" alt="Sua e Nossa Segurança">
-            <a class="cx1" href="https://trctaborda.com.br/quem-somos">Saiba Mais</a>
-        </div>
-        <div class="caixa">
-            <h2><strong>Nossos Parceiros</strong></h2>
-            <p>Atendemos com responsabilidade, garantindo proteção em cada contato.</p>
-            <img src="./imagens/parceiros.jpg" alt="Nossos Parceiros">
-            <a class="cx1" href="https://trctaborda.com.br/quem-somos">Saiba Mais</a>
-        </div>
-
-        <div class="caixa">
-            <h2><strong>Mais sobre a TRC TABORDA</strong></h2>
-            <p>Especialistas em soluções de atendimento, conectando pessoas e empresas com eficiência e segurança.</p>
-            <img src="./imagens/predio.jpg" alt="Mais sobre a TRC TABORDA">
-            <a class="cx1" href="https://trctaborda.com.br/">Saiba Mais</a>
+<div id="caixa-pt">
+    <img class="img2" src="./imagem/worl imagem.png">
+    <img class="img3" src="./imagem/best performance.png">
+    <span class="ca-ti"><strong>TRC Taborda</strong><br>
+        <br>
+         Considerada uma das melhores<br>
+         empresas do ramo de call center.
+       </span>
+</div>
+<div id="carteiras">
+    <span><strong class="carr-ti">Nossos parceiros</strong></span>
+    <div id="par-btn">
+        <div id="financeira" class="container-car">
+            <div class="ativos">
+                <img src="./imagem/ativos1.png" alt="Ativos" />
+            </div>
+            <div class="credi">
+                <img src="./imagem/credi1.png" alt="Credi" />
+            </div>
+            <div class="credipar">
+                <img src="./imagem/credipar1.png" alt="Credi Par" />
+            </div>
+            <div class="stone">
+                <img src="./imagem/stone1.png" alt="Stone" />
+            </div>
+            <div class="div">
+                <img src="./imagem/div1.png" alt="Div" />
+            </div>
+            <div class="bradesco">
+                <img src="./imagem/bradesco1.png" alt="bradesco" />
+            </div>
+            <div class="tenda">
+                <img src="./imagem/tenda1.png" alt="Tenda" />
+            </div>
+            <div class="direcional">
+                <img src="./imagem/direcional1.png" alt="Direcional" />
+            </div>
+            <div class="zema">
+                <img src="./imagem/zema1.png" alt="Zema" />
+            </div>
+            <div class="berlanda">
+                <img src="./imagem/berlanda2.png" alt="Berlanda" />
+            </div>
         </div>
     </div>
-    <footer>
-        <p>TRC TABORDA</p>
-        <p>TRC Taborda Recuperação de Crédito S/S LTDA <br>
-            <br> CNPJ 05.348.049/0001-53<br></p>
-        <p>Av. Mal. Floriano Peixoto, 523. Centro, Curitiba - PR 
-            <br>(41) 3022 0406 
-        <p>Todos os direitos reservados</p>
+</div>
+    <section id="button-ft">
+        <h4 class="button-ti"><strong>Tire suas dúvidas</strong></h4>
+        
+        <button class="button-pt" onclick="showContente('bt2')">
+            <h2 class="txt-bu-ti"><strong>Quem somos?</strong></h2>
+            <div id="bt2" class="bt-content">
+                <span class="txt-button"><strong>A TRC Taborda atua há mais de 15 anos no mercado de financeiras.</strong></span>
+            </div>
+        </button>
+
+        <button class="button-pt" onclick="showContente('bt3')">
+            <h2 class="txt-bu-ti"><strong>Não consegui achar meu débito em aberto.</strong></h2>
+            <div id="bt3" class="bt-content">
+                <span class="txt-button"><strong>Entre em contato com nossos especialistas.</strong></span>
+            </div>
+        </button>
+
+        <button class="button-pt" onclick="showContente('bt4')">
+            <h2 class="txt-bu-ti"><strong>Como atualizo meus dados?</strong></h2>
+            <div id="bt4" class="bt-content">
+                <span class="txt-button"><strong>Entre nessa opção e faça sua atualização cadastral.</strong></span>
+            </div>
+        </button>
+
+        <button class="button-pt" onclick="showContente('bt5')">
+            <h2 class="txt-bu-ti"><strong>Como funciona a quitação?</strong></h2>
+            <div id="bt5" class="bt-content">
+                <span class="txt-button"><strong>Temos algumas propostas para o pagamento à vista, com ótimos descontos.</strong></span>
+            </div>
+        </button>
+
+        <button class="button-pt" onclick="showContente('bt6')">
+            <h2 class="txt-bu-ti"><strong>Qual o 0800 da TRC Taborda?</strong></h2>
+            <div id="bt6" class="bt-content">
+                <span class="txt-button"><strong>Entre em contato pelo 0800 ou pelo nosso WhatsApp.</strong></span>
+            </div>
+        </button>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <h2 class="footer-title"><span style="color: white;">TRC </span>TABORDA</h2>
+                <p class="footer-info">TRC Taborda Recuperação de Crédito S/S LTDA</p>
+                <p class="footer-info">CNPJ: 05.348.049/0001-53</p>
+                <p class="footer-info">Av. Mal. Floriano Peixoto, 523. Centro, Curitiba - PR</p>
+                <p class="footer-info">(41) 3022 0406</p>
+            </div>
+            <div class="footer-rights">
+                <p>&copy; 2024 TRC Taborda. Todos os direitos reservados.</p>
+                <p>
+                    <a href="#">Política de Privacidade</a> | 
+                    <a href="#">Termos de Uso</a>
+                </p>
+            </div>
+        </div>
     </footer>
-</body>
+    <!-- <div class="modal-overlay" id="modal-overlay">
+        <div class="form-box">
+            <span class="close-btn" onclick="closeModal()">×</span> <!-- Botão para fechar -->
+            <!-- <form class="form">
+                <span class="title">Atualize o seu cadastro</span>
+                <div class="form-container">
+                    <input type="text" class="input" placeholder="CPF/CNPJ">
+                    <input type="email" class="input" placeholder="Email">
+                    <input type="number" class="input" placeholder="Número">
+                </div>
+                <button type="submit" class="botao">Atualizar</button>
+            </form>
+        </div>
+    </div>  -->
 </html>
+ 
