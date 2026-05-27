@@ -8,15 +8,15 @@
 
 :root {
   --brand: #400a0a;
-  --accent: #c40000;
-  --accent-d: #c40000;
+  --accent: #861a1e;
+  --accent-d: #861a1e;
   --bg: #f4f6f8;
   --white: #ffffff;
   --border: #dde2e8;
   --text: #0a2540;
   --text-2: #4b5563;
   --text-3: #9ca3af;
-  --danger: #dc2626;
+  --danger: #861a1e;
   --warn: #d97706;
   --r: 10px;
 }
