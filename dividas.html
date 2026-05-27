@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Negociar Dívidas</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/dividas.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="logo">
+      <span class="logo-txt">TRC Taborda Negocia</span>
+  </div>
+  <span class="user-tag">João Silva</span>
+</div>
+
+<div class="page">
+
+  <div class="page-title">
+    <h1>Negociar dívidas</h1>
+    <p>Selecione os débitos que deseja quitar e escolha um plano de pagamento.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <h2>Dívidas encontradas</h2>
+      <span>5 registros</span>
+    </div>
+    <div id="debtList"></div>
+  </div>
+
+  <div class="side">
+    <div class="card">
+      <div class="card-head"><h2>Resumo</h2></div>
+      <div class="sum-body">
+        <div class="sum-empty" id="sumEmpty">
+          <p>Selecione uma ou mais<br>dívidas para continuar.</p>
+        </div>
+        <div id="sumLines" style="display:none"></div>
+        <div class="sum-total" id="sumTotal" style="display:none">
+          <span class="tl">Total selecionado</span>
+          <span class="tv" id="sumTotalVal">—</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="plansCard" style="display:none">
+      <div class="card-head"><h2>Plano de pagamento</h2></div>
+      <div class="plan-list" id="planList"></div>
+    </div>
+
+    <div class="card" id="confirmCard" style="display:none">
+      <div class="card-head"><h2>Confirmar acordo</h2></div>
+      <div class="action-body">
+        <label class="field-label" for="cpfInput">CPF do titular</label>
+        <div class="inp-wrap">
+          <svg class="inp-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+          </svg>
+          <input type="text" id="cpfInput" placeholder="000.000.000-00" maxlength="14">
+        </div>
+        <div class="err" id="errMsg"></div>
+        <button class="btn-main" id="btnConfirm">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Fechar acordo
+        </button>
+        <button class="btn-link" id="btnClear">Limpar seleção</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-bg" id="modal">
+  <div class="modal">
+    <div class="modal-top">
+      <div class="modal-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h2>Acordo firmado!</h2>
+      <p>Boleto/Pix enviado ao seu e-mail. Seu nome sai do SPC/Serasa em até 5 dias úteis.</p>
+    </div>
+    <div class="modal-body" id="receiptBody"></div>
+    <div class="modal-foot">
+      <button class="btn-dl" id="btnDl">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Baixar comprovante
+      </button>
+      <button class="btn-re" id="btnRe">Negociar outras dívidas</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/dividas.js"></script>
+</body>
+</html>
